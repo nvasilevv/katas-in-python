@@ -2,7 +2,6 @@ from copy import deepcopy
 
 
 def chop(number: int, data: list[int]) -> int:
-    "Assumes sorted list passed in `data`"
     low = 0
     high = len(data) - 1
     mid = 0
