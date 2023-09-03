@@ -35,3 +35,16 @@ def _chop_recursive(number: int, data: list[int], low: int, high: int) -> int:
             return _chop_recursive(number, data, mid + 1, high)
     else:
         return -1
+
+
+def chop_array_recursive(number: int, data: list[int], index_track: int=0) -> int:
+    if data == []:
+        return -1
+    mid = len(data) // 2
+    if data[mid] == number:
+        return index_track + mid
+    elif data[mid] < number:
+        index_track += mid + 1
+        return chop_array_recursive(number, data[mid+1:], index_track)
+    else: 
+        return chop_array_recursive(number, data[:mid], index_track)
