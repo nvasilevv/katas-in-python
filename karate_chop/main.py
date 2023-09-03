@@ -1,6 +1,9 @@
 from copy import deepcopy
 
 
+# http://codekata.com/kata/kata02-karate-chop/
+
+
 def chop(number: int, data: list[int]) -> int:
     low = 0
     high = len(data) - 1
